@@ -8,7 +8,7 @@ A static web page that checks which accounts a public Instagram profile follows 
 2. Enter a public Instagram profile link or username.
 3. The page lists accounts that the profile follows but who don't follow back.
 
-The scraper relies on public Instagram endpoints and may stop working if Instagram changes their interface or rate limits requests. If the page shows an error message, the profile may be private or Instagram may have blocked the request.
+
 
 ## Deploying to GitHub Pages
 
