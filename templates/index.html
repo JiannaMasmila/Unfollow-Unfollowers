@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Instagram Unfollowers</title>
+    <style>
+      body { font-family: Arial, sans-serif; text-align: center; margin-top: 40px; }
+      input[type=text] { width: 60%; padding: 10px; }
+      button { padding: 10px 20px; margin-left: 10px; }
+      ul { list-style-type: none; padding: 0; }
+    </style>
+  </head>
+  <body>
+    <h1>Instagram Unfollowers</h1>
+    <form method="post">
+      <input type="text" name="profile_url" placeholder="Public Profile Link" required>
+      <button type="submit">Check</button>
+    </form>
+    <p>Profile must be public</p>
+    {% if error %}
+      <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    {% if unfollowers %}
+      <h2>Unverified follow who isn't on follower list</h2>
+      <ul>
+        {% for user in unfollowers %}
+          <li>{{ user }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </body>
+</html>
