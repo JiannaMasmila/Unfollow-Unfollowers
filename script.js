@@ -1,9 +1,6 @@
 async function fetchJSON(path) {
   const res = await fetch(`https://r.jina.ai/https://www.instagram.com/api/v1/${path}`);
-  if (!res.ok) {
-    throw new Error(`request failed with ${res.status}`);
-  }
-  return res.json();
+
 }
 
 async function collectUsers(id, type) {
